@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Different Views</title>
+</head>
+<link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+<body ng-app='MenuApp'>
+	<h1 class="text-center">Welcome to our Restaurant</h1>
+
+	<ui-view></ui-view>
+
+
+	<!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/shoppinglist/menuapp.module.js"></script>
+    <script src="src/shoppinglist/data-module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/route.js"></script>
+
+    <!-- 'ShoppingList' module artifacts -->
+    <script src="src/shoppinglist/categories.component.js"></script>
+    <script src="src/shoppinglist/items.component.js"></script>
+    <script src="src/shoppinglist/main-categorylist.controller.js"></script>
+    <script src="src/shoppinglist/item-detail.controller.js"></script>
+    <script src="src/shoppinglist/menudata.service.js"></script>
+
+
+</body>
+</html>
