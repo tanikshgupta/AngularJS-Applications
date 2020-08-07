@@ -33,8 +33,7 @@ The task is create a text box and a button with the label "Narrow It Down For Me
 Initially, the user just sees a screen with the textbox and the "Narrow It Down For Me!" button.
  Once the user enters something into the textbox and clicks the button,
  the app will reach out to the server and retrieve the list of menu items for the entire menu.
- Once retrieved, the task is to loop through all the items and, for each item, 
-do a simple check if the string being searched for by the user appears anywhere in the description of the item.
+ Once retrieved, the task is to loop through all the items and, for each item, do a simple check if the string being searched for by the user appears anywhere in the description of the item.
  If it does, that item gets placed in a special `found` array. If it doesn't, you simply move on to the next item.
 Once the app goes through all the items, it should display the `found` list of items.
  Each item in the list should show the name of the menu item, its short_name, and the description.
