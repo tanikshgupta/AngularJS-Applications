@@ -1,0 +1,36 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">My Info</h2>
+  <div ng-if="logInCtrl.disp">
+    <div><span class="lead">First Name :    </span>{{logInCtrl.data.firstname}}</div>
+    <div><span class="lead">Last Name :    </span>{{logInCtrl.data.lastname}}</div>
+    <div><span class="lead">E-mail :    </span>{{logInCtrl.data.email}}</div>
+    <div><span class="lead">Phone No. :    </span>{{logInCtrl.data.phone}}</div>
+
+
+    <div class="menu-item-tile col-md-6">
+      <div class="row">
+        <div><span class="lead">Favourite Menu Item : </span></div>
+
+        <div class="col-sm-5">
+          <div class="menu-item-photo">
+            <div>{{logInCtrl.data.data.short_name}}</div>
+            <img class="img-responsive" width="250" height="150" ng-src="{{logInCtrl.basePath}}/images/{{logInCtrl.data.data.short_name}}.jpg" alt="{{logInCtrl.data.data.name}}">
+          </div>
+          <div class="menu-item-price">{{logInCtrl.data.data.price_small | currency}}<span> {{logInCtrl.data.data.small_portion_name}}</span> {{logInCtrl.data.data.price_large | currency}} <span>{{logInCtrl.data.data.large_portion_name}}</span></div>
+        </div>
+        <div class="menu-item-description col-sm-7">
+          <h3 class="menu-item-title">{{logInCtrl.data.data.name}}</h3>
+          <p class="menu-item-details">{{logInCtrl.data.data.description}}</p>
+        </div>
+      </div>
+      <hr class="visible-xs">
+    </div>
+
+
+
+  </div>
+  <div ng-if="!logInCtrl.disp">
+    Not Signed Up Yet. <a ui-sref="public.signUp">Sign up Now!</a>
+  </div>
+  
+</div>
